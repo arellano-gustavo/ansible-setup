@@ -11,38 +11,27 @@ Pasos para levantar un servidor "Creador de instancias AWS"
     8  nano  ~/.boto
     9  cd prueba-ansible-aws
     10  ansible-playbook -vv -i localhost, -e "type=webservers" provision-ec2.yml
-    11  ~/.ansible.cfg
+    11  cat ~/.ansible.cfg
     12  nano ~/.ansible.cfg
     13  ansible-playbook -vv -i localhost, -e "type=webservers" provision-ec2.yml
     14  ansible-playbook -vvvv -i localhost, -e "type=webservers" provision-ec2.yml
     15  ansible-playbook -vvvv -i localhost, -e "type=webservers" provision-ec2.yml  --private-key meta.pem 
     16  tar -czvf prueba-ansible-aws.tar.gz prueba-ansible-aws
-    17  mv prueba-ansible-aws.tar.gz ans.tar.gz
-    18  cat .ansible.cfg 
-    19  docker run -d --restart=always -p 8383:8080 rancher/server
-    20  sudo sh -c "echo 'LC_ALL=en_US.UTF-8\nLANG=en_US.UTF-8' >> /etc/environment"
-    21  nano .bash_history 
+    17  cat .ansible.cfg 
+    18  docker run -d --restart=always -p 8383:8080 rancher/server
+    19  sudo sh -c "echo 'LC_ALL=en_US.UTF-8\nLANG=en_US.UTF-8' >> /etc/environment"
+    20  scp -i sci.pem  prueba-ansible-aws.tar.gz    ubuntu@34.194.36.154:/home/ubuntu
+    21  cat .profile 
     22  cat .ansible.cfg 
-    23  scp -i sci.pem  ans.tar.gz ubuntu@1.1.1.1:/ok
-    24  scp -i sci.pem  ans.tar.gz ubuntu@34.194.36.54:/home/ubuntu
-    25  cat .ansible
-    26  cat .boto
-    27  cd prueba-ansible-aws/
-    28  nano boto-info.txt
+    23  rm -rf prueba-ansible-aws.tar.gz 
+    24  cd prueba-ansible-aws/
+    25  nano ansible-info.txt
+    26  tar czvf prueba-ansible-aws.tar.gz  prueba-ansible-aws
+    27  scp -i sci.pem  prueba-ansible-aws.tar.gz    ubuntu@34.194.36.54:/home/ubuntu
+    28  rm -rf prueba-ansible-aws.tar.gz 
     29  tar czvf prueba-ansible-aws.tar.gz  prueba-ansible-aws
     30  scp -i sci.pem  prueba-ansible-aws.tar.gz    ubuntu@34.194.36.54:/home/ubuntu
-    31  cat .profile 
+    31  cat .boto 
     32  cat .ansible.cfg 
-    33  rm -rf prueba-ansible-aws.tar.gz 
-    34  cd prueba-ansible-aws/
-    35  nano ansible-info.txt
-    36  tar czvf prueba-ansible-aws.tar.gz  prueba-ansible-aws
-    37  scp -i sci.pem  prueba-ansible-aws.tar.gz    ubuntu@34.194.36.54:/home/ubuntu
-    38  rm -rf prueba-ansible-aws.tar.gz 
-    39  tar czvf prueba-ansible-aws.tar.gz  prueba-ansible-aws
-    40  scp -i sci.pem  prueba-ansible-aws.tar.gz    ubuntu@34.194.36.54:/home/ubuntu
-    41  cat .boto 
-    42  cat .ansible.cfg 
-    43  cd .ansible/
-    44  cd prueba-ansible-aws/
 
+FIN
