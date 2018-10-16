@@ -9,7 +9,7 @@ Pasos para crear un creador de instancias AWS
     6  sudo apt-get install python-pip
     7  pip install -U boto
     8  nano  ~/.boto
-    9  cd prueba-ansible-aws/
+    9  cd prueba-ansible-aws
    10  ansible-playbook -vv -i localhost, -e "type=webservers" provision-ec2.yml
    11  ~/.ansible.cfg
    12  nano ~/.ansible.cfg
