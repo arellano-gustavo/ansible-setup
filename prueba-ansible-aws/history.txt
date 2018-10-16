@@ -1,0 +1,64 @@
+    1  sudo nano /etc/hosts
+    2  sudo sh -c "echo 'LC_ALL=en_US.UTF-8\nLANG=en_US.UTF-8' >> /etc/environment"
+    3  sudo apt-get update
+    4  sudo apt-get install ansible
+    5  tar xzvf ans.tar.gz 
+    6  sudo apt-get install python-pip
+    7  pip install -U boto
+    8  nano  ~/.boto
+    9  cd prueba-ansible-aws/
+   10  ansible-playbook -vv -i localhost, -e "type=webservers" provision-ec2.yml
+   11  ~/.ansible.cfg
+   12  nano ~/.ansible.cfg
+   13  ansible-playbook -vv -i localhost, -e "type=webservers" provision-ec2.yml
+   14  ansible-playbook -vvvv -i localhost, -e "type=webservers" provision-ec2.yml
+   15  ansible-playbook -vvvv -i localhost, -e "type=webservers" provision-ec2.yml  --private-key meta.pem 
+   16  tar -czvf prueba-ansible-aws.tar.gz prueba-ansible-aws
+   17  mv prueba-ansible-aws.tar.gz ans.tar.gz
+   18  cat .ansible.cfg 
+   19  docker run -d --restart=always -p 8383:8080 rancher/server
+   20  sudo apt install tree
+   21  sudo sh -c "echo 'LC_ALL=en_US.UTF-8\nLANG=en_US.UTF-8' >> /etc/environment"
+   22  sudo apt-get update
+   23  tree
+   24  nano .bash_history 
+   25  history
+   26  exit
+   27  history
+   28  nano .bash_history 
+   29  cat .ansible.cfg 
+   30  top
+   31  exit
+   32  sudo shutdown now
+   33  history
+   34  ll
+   35  exit
+   36  ll
+   37  scp -i sci.pem  ans.tar.gz ubuntu@1.1.1.1:/ok
+   38  history
+   39  exit
+   40  scp -i sci.pem  ans.tar.gz ubuntu@34.194.36.54:/home/ubuntu
+   41  ll
+   42  cat .ansible
+   43  ll ./.ansible
+   44  cat .boto
+   45  cd prueba-ansible-aws/
+   46  ll
+   47  nano boto-info.txt
+   48  cd ..
+   49  tar czvf prueba-ansible-aws.tar.gz  prueba-ansible-aws
+   50  ll
+   51  scp -i sci.pem  prueba-ansible-aws.tar.gz    ubuntu@34.194.36.54:/home/ubuntu
+   52  cat .profile 
+   53  cat .ansible.cfg 
+   54  rm -rf prueba-ansible-aws.tar.gz 
+   55  cd prueba-ansible-aws/
+   56  ll
+   57  nano ansible-info.txt
+   58  cd ..
+   59  tar czvf prueba-ansible-aws.tar.gz  prueba-ansible-aws
+   60  scp -i sci.pem  prueba-ansible-aws.tar.gz    ubuntu@34.194.36.54:/home/ubuntu
+   61  ll
+   62  exit
+   63  rm -rf prueba-ansible-aws.tar.gz 
+   64  history > prueba-ansible-aws/history.txt

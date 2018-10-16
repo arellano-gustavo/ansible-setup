@@ -1,0 +1,3 @@
+ubuntu@ip-172-31-13-163:~$ cat .ansible.cfg 
+[defaults]
+host_key_checking = False

@@ -1,0 +1,31 @@
+---
+ - hosts: localhost
+   connection: local
+   gather_facts: false
+   user: root
+   pre_tasks:
+    - include_vars: ec2_vars/{{type}}.yml
+   roles:
+    - provision-ec2
+
+ - hosts: launched
+   name: Pre-instalaciones... Incluye Python y variables de lenguaje
+   gather_facts: false
+   pre_tasks:
+     - raw: sudo sh -c "echo 'LC_ALL=en_US.UTF-8\nLANG=en_US.UTF-8' >> /etc/environment"
+     - raw: sudo apt-get update 
+     - raw: sudo apt-get -y install python
+     - raw: wget -qO- https://get.docker.com/ | sh   
+     - raw: sudo gpasswd -a ubuntu docker
+
+ - hosts: launched
+   name: Instalando Servidor de Apache
+   gather_facts: true
+   user: ubuntu
+   sudo: yes
+   tasks:
+     - name: Install apache2
+       apt: name=apache2 state=latest
+     - raw: docker pull gustavoarellano/jdk18
+       
+
