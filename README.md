@@ -1,5 +1,5 @@
 # ansible-setup
-Pasos para crear un creador de instancias AWS
+Pasos para levantar un servidor "Creador de instancias AWS"
 
     1  sudo nano /etc/hosts
     2  sudo sh -c "echo 'LC_ALL=en_US.UTF-8\nLANG=en_US.UTF-8' >> /etc/environment"
