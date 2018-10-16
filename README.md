@@ -1,6 +1,6 @@
 # ansible-setup
 Pasos para crear un creador de instancias AWS
-
+'''
     1  sudo nano /etc/hosts
     2  sudo sh -c "echo 'LC_ALL=en_US.UTF-8\nLANG=en_US.UTF-8' >> /etc/environment"
     3  sudo apt-get update
@@ -48,4 +48,4 @@ Pasos para crear un creador de instancias AWS
    42  cat .ansible.cfg 
    43  cd .ansible/
    44  cd prueba-ansible-aws/
-
+'''
